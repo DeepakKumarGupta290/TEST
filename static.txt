@@ -1,0 +1,13 @@
+
+Static ,Non-Static ,Local Variable,Refernece variable
+public class A{
+    static int x=100;//Static (Using class we have to call Static)
+    int y=20;//non-static(Using refernce variable we have to call non-static)
+    public static void main (String[] args) {
+        A a=new A();//////(a=Referce Variable)
+        System.out.println(a.y);
+        System.out.println(A.x);
+        int z=230;// Local Varailabe
+        System.out.println(z);
+    }
+}

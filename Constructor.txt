@@ -1,0 +1,49 @@
+Constructor
+=========================
+It has the same name as the class name.
+It is by default void so it doesnot return any value.
+An object creation is must in case of constructor.
+====================================================
+Constructor Chaining
+==================
+It is defined as the process using which we can call another constructor.
+======================================================================
+Constructor Overloading
+============================================
+It contains more than one constructor with different number of arguments and parameters.
+
+public class A{
+    A(Character c){
+        System.out.println(c);
+    }
+    A(int x){
+        System.out.println(x);
+    }
+    A(String S){
+        System.out.println(S);
+    }
+    public static void main (String[] args) {
+        A a=new A("Hello");
+        A a1=new A(100);
+        A a2=new A('A');
+    }
+}
+=======================================================================================
+public class A{
+    public void test2(double d){
+        System.out.println(d);
+    }
+    public void test1(String S){
+        System.out.println(S);
+        this.test2(132.1313d);
+    }
+    public void test(int x){
+        System.out.println(x);
+        this.test1("Hello");
+    }
+    public static void main (String[] args) {
+        A a=new A();
+        a.test(100);
+    }
+}
+============================================================================================

@@ -1,0 +1,10 @@
+import java.util.*;
+import java.util.stream.*;          ##wrapper claass
+import java.util.function.*;
+public class A{
+    public static void main (String[] args) {
+        List<Integer> list=Arrays.asList(1,2,3,4,5);
+        int s=list.stream().mapToInt(x->x).sum();
+        System.out.println(s);
+    }
+}

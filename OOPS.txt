@@ -1,0 +1,97 @@
+ OOPS
+==================================================================
+Single Inheritance
+=============================
+A-> B
+==========================
+public class A{/// Parent class
+    public void eat(){
+        System.out.println("eating");
+    }
+    public void sleep(){
+        System.out.println("sleeping");
+    }
+}
+
+public class B extends A{
+    public static void main (String[] args) {
+        B b=new B();
+        b.eat();
+        b.sleep();
+    }
+}
+
+Multilevel Inhertance
+==================================
+A->B->C
+==================================
+public class A{/// Parent class
+    public void eat(){
+        System.out.println("eating");
+    }
+    public void sleep(){
+        System.out.println("sleeping");
+    }
+}
+public class B extends A{
+    public void test(){
+        System.out.println("giving test");
+    }
+}
+public class C extends B{
+    public static void main (String[] args) {
+        C c=new C();
+        c.eat();
+        c.sleep();
+        c.test();
+    }
+}
+=========================================================
+Polymorphism
+========================================================
+public class A{
+    public void test(int x){
+        System.out.println(x);
+    }
+    public void test(String S){
+        System.out.println(S);
+    }
+    public static void main (String[] args) {
+        A a=new A();
+        a.test("Dipak");
+        a.test(100);
+    }
+}
+// Compile time polimorphism (Method overloading)
+// Same name But differt arguments and parameters
+=====================================================
+public class A{
+    public void test(){
+        System.out.println("test");
+    }
+    public void eat(){
+        System.out.println("Eating");
+    }
+}
+
+
+
+// Runtime polymorphism (Method overriding)
+public class B extends A{
+    @Override
+    public void eat(){
+        System.out.println("Nooooooooo Eating");
+    }
+    @Override
+     public void test(){
+        System.out.println("N/A");
+    }
+    public static void main (String[] args) {
+        B b=new B();
+        b.eat();
+        b.test();
+    }
+}
+============================================================
+Encapsulation
+================================================================
